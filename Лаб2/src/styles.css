@@ -1,0 +1,156 @@
+.main {
+  display: flex;
+  margin: 20px;
+  padding: 15px;
+  font-family: "Roboto", sans-serif;
+}
+@media (max-width: 700px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-left,
+  .main-right {
+    max-width: 100%;
+  }
+}
+@media (min-width: 701px) {
+  .main {
+    display: flex;
+    flex-direction: row;
+  }
+  .main-left,
+  .main-right {
+    max-width: 50%;
+  }
+}
+/* cтилі контейнерів зліва та справа */
+.main-left,
+.main-right {
+  display: flex;
+  flex-direction: column;
+}
+.small-text {
+  font-size: 0.8em;
+  word-spacing: 1vh;
+  line-height: 1.8;
+}
+/* стилі контейнеру зліва */
+.main-left {
+  padding-right: 20px;
+}
+.main-left h1,
+p {
+  margin-right: 25px;
+}
+.read-more {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  letter-spacing: 5px;
+  padding: 10px 25px;
+  width: fit-content;
+  font-size: 0.7em;
+  margin-bottom: 40px;
+}
+#intro {
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+/* стилі контейнеру справа */
+.list-info {
+  list-style: none;
+}
+.list-info .visible p {
+  color: #7c48c5;
+  font-weight: bold;
+  font-size: 1em;
+}
+.visible {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+.bold-text {
+  font-weight: bold;
+}
+.display-none {
+  display: none;
+}
+/* стилі кнопок */
+.plus-bttn,
+.read-more {
+  background-color: #7c48c5;
+  border: none;
+  color: aliceblue;
+}
+/* Стилі що описують роботу з кнопкою +
+*/
+.plus-bttn {
+  min-width: var(--l);
+  border-radius: 50%;
+  --t: 1px; 
+  --l: 35px; 
+  --s: 10px; 
+  --c1: #fff; 
+  --c2: #7c48c5;
+}
+.not-checked {
+  display: inline-block;
+  width: var(--l);
+  height: var(--l);
+  padding: var(--s);
+  background: linear-gradient(var(--c1) 0 0) content-box,
+    linear-gradient(var(--c1) 0 0) content-box, var(--c2);
+  background-position: center;
+  background-size: 100% var(--t), var(--t) 100%;
+  background-repeat: no-repeat;
+}
+.checked {
+  display: inline-block;
+  width: var(--l);
+  height: var(--l);
+  padding: var(--s);
+  background: linear-gradient(var(--c1) 0 0) content-box, var(--c2);
+  background-position: center;
+  background-size: 100% var(--t), var(--t) 100%;
+  background-repeat: no-repeat;
+}
+/* анімація переходу + в - при наведені курсора */
+.not-checked:hover {
+  transform: rotate(180deg);
+  transition: 0.5s;
+  display: inline-block;
+  width: var(--l);
+  height: var(--l);
+  padding: var(--s);
+
+  background: linear-gradient(var(--c1) 0 0) content-box, var(--c2);
+  background-position: center;
+  background-size: 100% var(--t), var(--t) 100%;
+  background-repeat: no-repeat;
+}
+.checked:hover {
+  transform: rotate(180deg);
+  transition: 0.5s;
+  display: inline-block;
+  width: var(--l);
+  height: var(--l);
+  padding: var(--s);
+
+  background: linear-gradient(var(--c1) 0 0) content-box,
+    linear-gradient(var(--c1) 0 0) content-box, var(--c2);
+  background-position: center;
+  background-size: 100% var(--t), var(--t) 100%;
+  background-repeat: no-repeat;
+}
+/* стилі прихованого текста  */
+.info {
+  margin-top: 30px;
+  margin-bottom: 35px;
+  padding: 10px;
+}
+.info li::marker {
+  content: " - ";
+}
